@@ -58,7 +58,10 @@ app.use("/mode", require("./routes/mode"));
 app.use("/payment", require("./routes/payment"));
 
 // setting up online pay
-app.use("/online-pay", require("./routes/mpesa/online"));
+app.use("/online", require("./routes/mpesa/online"));
+
+// setting up online pay
+app.use("/online-pay", require("./routes/mpesa/onlinePayments"));
 
 // initiating online pay by patients
 app.use("/client-pay", require("./routes/mpesa/mpesapay"));
